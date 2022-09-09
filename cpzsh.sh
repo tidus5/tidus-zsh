@@ -1,2 +1,4 @@
-cp ./.zshrc ~/
+
+#cp ./.zshrc ~/
+ln -s ./.zshrc ~/.zshrc
 source ~/.zshrc
