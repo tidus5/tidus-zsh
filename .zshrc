@@ -21,6 +21,7 @@ if [ "$TERM" = "xterm" ]; then
   export TERM=xterm-256color
 fi
 
+export PATH=~/.local/bin:$PATH
 #export MSYS_NO_PATHCONV=1
 
 # Set list of themes to pick from when loading at random
@@ -83,7 +84,7 @@ fi
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting z docker docker-compose kubectl)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting z sudo docker docker-compose kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -113,6 +114,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias aliasg="alias | grep"
+
+alias rm='trash-put'
+
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
